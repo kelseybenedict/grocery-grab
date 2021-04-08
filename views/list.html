@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Grocery Grab</title>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-light p-3 mb-2 bg-success text-white justify-content-center">
+        <a class="navbar-text text-light" href="./landing.html">Grocery Grab</a>
+    </nav>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col list-container">
+                <div class="card listCards">
+                    <div class="btn-group">
+                        <button class="btn btn-dark btn-lg dropdown-toggle" type="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Create New List
+                        </button>
+                        <div class="dropdown-menu">
+                            <form class="px-4 py-3">
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Name Your New List:</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Create List!</button>
+                            </form>
+                        </div>
+                    </div>
+                    <h2 class="card-title text-center">Current Lists:</h2>
+                    <ul class="list-group" id="myList">
+                        <li class="list-group-item text-center">List 1</li>
+                        <li class="list-group-item text-center">List 2</li>
+                        <li class="list-group-item text-center">List 3</li>
+                        <li class="list-group-item text-center">List 4</li>
+                        <li class="list-group-item text-center">List 5</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col list-container">
+                <div class="card listCards">
+                    <div class="btn-group">
+                        <button class="btn btn-dark btn-lg dropdown-toggle" type="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Add Item
+                        </button>
+                        <div class="dropdown-menu">
+                            <form class="px-4 py-3">
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Item:</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Quantity:</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Add Item!</button>
+                            </form>
+                        </div>
+                    </div>
+                    <h2 class="card-title text-center">"List Name"</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                    value="option1" aria-label="...">
+                            </div>
+                            Item 1
+                            <i class="fas fa-trash-alt"></i>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                    value="option1" aria-label="...">
+                            </div>
+                            Item 2
+                            <i class="fas fa-trash-alt"></i>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                    value="option1" aria-label="...">
+                            </div>
+                            Item 3
+                            <i class="fas fa-trash-alt"></i>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                    value="option1" aria-label="...">
+                            </div>
+                            Item 4
+                            <i class="fas fa-trash-alt"></i>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                    value="option1" aria-label="...">
+                            </div>
+                            Item 5
+                            <i class="fas fa-trash-alt"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

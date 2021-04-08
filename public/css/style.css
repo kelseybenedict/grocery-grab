@@ -1,0 +1,51 @@
+/* landing page css */
+body{
+    background: grey;
+    background-image: url(./jordan-christian-TS2_ti0J1w8-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+nav {
+    font-family: 'Permanent Marker', cursive;
+    
+}
+
+.navbar-text {
+    font-size: 35px;
+}
+
+h5 {
+    padding-top: 15px;
+} 
+
+.container {
+    margin-top: 10%;
+    margin-bottom: 95px;
+}
+
+.card {
+    padding-bottom: 15px;
+    background: rgba(255, 255, 255, 0.774);
+    font-family: 'Montserrat Alternates', sans-serif;   
+}
+
+.btn {
+    margin-bottom: 20px;
+}
+
+
+
+#login {
+    margin-bottom: 30px;
+}
+
+.list-container {
+    margin-top: 10%;
+}
+
+.dropdown-toggle{
+    margin-bottom: 45px;
+}

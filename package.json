@@ -17,12 +17,25 @@
   "bugs": {
     "url": "https://github.com/kelseybenedict/grocery-grab/issues"
   },
+  "development":{
+    "username": "root",
+    "password": "root",
+    "database": "grocery_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
+  },
   "homepage": "https://github.com/kelseybenedict/grocery-grab#readme",
   "dependencies": {
     "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.0",
     "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
     "path": "^0.12.7",
     "sequelize": "^6.6.2"
   }

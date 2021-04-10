@@ -30,12 +30,14 @@ Item.init(
               key: 'id',
             },
         },
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'item',
-}
+},
+{
+    sequelize: sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'item',
+  }
 );
 
 module.exports = Item;

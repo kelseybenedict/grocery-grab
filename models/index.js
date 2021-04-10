@@ -3,7 +3,7 @@ const List = require("./List");
 const Item = require("./Item");
 
 //hasMany if we decide to give the user multiple lists
-User.hasOne(List, {
+User.hasMany(List, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
   });
@@ -13,8 +13,8 @@ User.hasOne(List, {
   });
 
   List.hasMany(Item, { 
-      foreignKey:"list_id",
-      onDelete: "CASCADE"
+    foreignKey:"list_id",
+    onDelete: "CASCADE"
   });
 
   User.belongsToMany(List, {

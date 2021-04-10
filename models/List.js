@@ -22,13 +22,14 @@ List.init(
               key: 'id',
             },
         },
-        sequelize: sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'list',
-        
-}
+},
+{
+    sequelize: sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'list',
+  }
 );
 
 module.exports = List;

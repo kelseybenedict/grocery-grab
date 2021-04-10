@@ -4,7 +4,7 @@
 
  //- When they click on the login button- the login card is displayed
  const loginFormHandler = async (event) => {
-    event.preventDefault();
+    // event.preventDefault();
   
     // Collect values from the login form
     const email = document.querySelector('#exampleInputEmail1').value.trim();
@@ -35,7 +35,7 @@
     // Collect values from the sign up form form
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
-    const retypePass = document.querySelector('#retype-pass-signup').value.trim();
+    // const retypePass = document.querySelector('#retype-pass-signup').value.trim();
   
     //need to confirm if both passwords match? Do we need this? If so, how does it chain to the POST request
     

@@ -1,6 +1,7 @@
 const User = require("./User");
 const List = require("./List");
 const Item = require("./Item");
+const { PassThrough } = require("stream");
 
 User.hasMany(List, {
     foreignKey: 'user_id',
@@ -16,8 +17,9 @@ User.hasMany(List, {
     onDelete: "CASCADE"
   });
 
-  User.belongsToMany(List, {
-    foreignKey: 'user_id'
+  Item.belongsTo(List, {
+    foreignKey: 'list_id'
+    
   });
 
   module.exports = { User, List, Item };

@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2">
+        <div class="col list-container">
+            <div class="card listCards">
+                <div class="btn-group">
+                    <button class="btn btn-dark btn-lg dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Create New List
+                    </button>
+                    <div class="dropdown-menu">
+                        <form class="px-4 py-3">
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Name Your New List:</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Create List!</button>
+                        </form>
+                    </div>
+                </div>
+                <h2 class="card-title text-center">Current Lists:</h2>
+                <ul class="list-group" id="myList">
+                    {{#each lists as |list|}}
+                    <li class="list-group-item text-center">{{list_name}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="col list-container">
+            <div class="card listCards">
+                <div class="btn-group">
+                    <button class="btn btn-dark btn-lg dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Add Item
+                    </button>
+                    <div class="dropdown-menu">
+                        <form class="px-4 py-3">
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Item:</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Quantity:</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add Item!</button>
+                        </form>
+                    </div>
+                </div>
+                <h2 class="card-title text-center">{{list_name}}</h2>
+                <ul class="list-group">
+                    {{#each items as |item|}}
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                            </div>
+                        {{item_name}}
+                        {{item_quantity}}
+                        <i class="fas fa-trash-alt"></i>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+</div>

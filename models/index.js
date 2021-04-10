@@ -2,7 +2,6 @@ const User = require("./User");
 const List = require("./List");
 const Item = require("./Item");
 
-//hasMany if we decide to give the user multiple lists
 User.hasMany(List, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'

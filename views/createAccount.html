@@ -20,7 +20,7 @@
 
 <body>
     <nav class="navbar sticky-top navbar-light p-3 mb-2 bg-success text-white justify-content-center">
-        <a class="navbar-text text-light" href="./landing.html">Grocery Grab</a>
+        <a href="./landing.html"><img id="logo" src="../public/images/GGPIC.png" alt="hands and fruit"></a>
     </nav>
     <div class="container">
         <div class="row">
@@ -28,18 +28,18 @@
                 <div class="card text-center" style="width: 27rem;">
                     <div class="card-body">
                         <h2 class="card-title" id="login">Create an Account</h2>
-                        <form>
+                        <form class="form signup-form">
                             <div class="form-group">
-                              <label for="exampleInputEmail1">Email Address:</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              <label for="email-signup">Email Address:</label>
+                              <input type="email" class="form-control" id="email-signup" aria-describedby="emailHelp">
                             </div>
                             <div class="form-group">
-                              <label for="exampleInputPassword1">Password:</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1">
+                              <label for="password-signup">Password:</label>
+                              <input type="password" class="form-control" id="password-signup">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Retype Password:</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                <label for="retype-pass-signup">Retype Password:</label>
+                                <input type="password" class="form-control" id="retype-pass-signup">
                               </div>
                             <button type="submit" class="btn btn-success">Submit</button>
                             <a id="login" class="form-text text-muted" href="./login.html" >Already Have an Account? Click Here to Login!

@@ -1,7 +1,7 @@
 /* landing page css */
 body{
     background: grey;
-    background-image: url(./jordan-christian-TS2_ti0J1w8-unsplash.jpg);
+    background-image: url(../images/backgroundimage.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -13,8 +13,10 @@ nav {
     
 }
 
-.navbar-text {
-    font-size: 35px;
+
+#logo {
+    height: 90px;
+    margin-bottom: 0px;
 }
 
 h5 {
@@ -42,10 +44,12 @@ h5 {
     margin-bottom: 30px;
 }
 
-.list-container {
-    margin-top: 10%;
-}
+
 
 .dropdown-toggle{
     margin-bottom: 45px;
+}
+
+i {
+    float: right;
 }

@@ -1,55 +1,102 @@
+/* header, .project:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
+}
+
+#logo {
+  height: 75px;
+} */
+
 /* landing page css */
 body{
-    background: grey;
-    background-image: url(../images/backgroundimage.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+  background: grey;
+  background-image: url(../images/backgroundimage.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 nav {
-    font-family: 'Permanent Marker', cursive;
-    
+  font-family: 'Permanent Marker', cursive;
+  text-align: right;
+}
+
+.wel {
+  margin-top: 15px;
+  margin-bottom: 0;
+  
+}
+
+header {
+  background-color: rgb(94, 180, 86);
 }
 
 
 #logo {
-    height: 90px;
-    margin-bottom: 0px;
+  height: 75px;
+  margin-bottom: 0px;
+  margin-left: 50px;
 }
 
 h5 {
-    padding-top: 15px;
+  padding-top: 15px;
 } 
 
 .container {
-    margin-top: 10%;
-    margin-bottom: 95px;
+  margin-top: 10%;
+  margin-bottom: 95px;
 }
 
 .card {
-    padding-bottom: 15px;
-    background: rgba(255, 255, 255, 0.774);
-    font-family: 'Montserrat Alternates', sans-serif;   
+  padding-bottom: 15px;
+  background: rgba(255, 255, 255, 0.774);
+  font-family: 'Montserrat Alternates', sans-serif;   
 }
 
 .btn {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
+
 
 
 
 #login {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 
 
 .dropdown-toggle{
-    margin-bottom: 45px;
+  margin-bottom: 45px;
 }
 
 i {
-    float: right;
+  float: right;
+}
+
+@media screen and (max-width: 575px) {
+
+  #logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+nav{
+  text-align: center;
+}
 }

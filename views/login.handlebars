@@ -1,25 +1,93 @@
-<div class="container">
-        <div class="row">
-            <div class="col d-flex justify-content-center">
-                <div class="card text-center" style="width: 27rem;">
-                    <div class="card-body">
-                        <h2 class="card-title" id="login">Login</h2>
-                        <form class="form login-form">
-                            <div class="form-group">
-                              <label for="exampleInputEmail1">Email Address:</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputPassword1">Password:</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <button id="" type="submit" class="btn btn-success">Submit</button>
-                            <a id="createAcc" class="form-text text-muted" href="/signup" >Dont Have an Account? Click Here to Sign Up!
-                            </a>
-                          </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="row">
+  <div class="col-md-6">
 
-<script src="../public/js/login.js"></script>
+    <div class="col d-flex justify-content-center">
+      <div class="card text-center" style="width: 27rem;">
+        <div class="card-body">
+          <h2 class="card-title" id="login">Login</h2>
+          <form class="form login-form">
+            <div class="form-group">
+              <label for="email-login">Email Address:</label>
+              <input type="email" class="form-input" type="text" id="email-login">
+            </div>
+            <div class="form form-group">
+              <label for="exampleInputPassword1">Password:</label>
+              <input class="form-input" type="password" id="password-login">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      {{!-- <h2>Login</h2>
+
+      <form class="form login-form">
+        <div class="form-group">
+          <label for="email-login">email:</label>
+          <input class="form-input" type="text" id="email-login" />
+        </div>
+        <div class="form-group">
+          <label for="password-login">password:</label>
+          <input class="form-input" type="password" id="password-login" />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">login</button>
+        </div>
+      </form> --}}
+    </div>
+  </div>
+
+  <div class="col-md-6">
+
+    <div class="col d-flex justify-content-center">
+      <div class="card text-center" style="width: 27rem;">
+        <div class="card-body">
+          <h2 class="card-title" id="login">Create an Account</h2>
+          <form class="form signup-form">
+            <div class="form-group">
+              <label for="name-signup">Name:</label>
+              <input class="form-input" type="text" id="name-signup" />
+            </div>
+            <div class="form-group">
+              <label for="email-signup">Email:</label>
+              <input class="form-input" type="text" id="email-signup" />
+            </div>
+            <div class="form-group">
+              <label for="password-signup">password:</label>
+              <input class="form-input" type="password" id="password-signup" />
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">signup</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{!-- <h2>Signup</h2>
+
+  <form class="form signup-form">
+    <div class="form-group">
+      <label for="name-signup">name:</label>
+      <input class="form-input" type="text" id="name-signup" />
+    </div>
+    <div class="form-group">
+      <label for="email-signup">email:</label>
+      <input class="form-input" type="text" id="email-signup" />
+    </div>
+    <div class="form-group">
+      <label for="password-signup">password:</label>
+      <input class="form-input" type="password" id="password-signup" />
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">signup</button>
+    </div>
+  </form> --}}
+{{!-- </div> --}}
+</div>
+
+<script src="./js/login.js"></script>

@@ -25,20 +25,36 @@
     {{#each projects as |project|}}
     <div class="row mb-2">
       <div class="col-2">
-        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
-          value="option1" aria-label="...">
+        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1"
+          aria-label="...">
       </div>
       <div class="col-8">
         <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
       </div>
       <div class="col-2">
         <i class="btn btn-sm btn-danger fas fa-trash-alt" data-id="{{project.id}}"></i>
-        
+
       </div>
     </div>
     {{/each}}
   </div>
   {{/if}}
+  <div class="btn-group">
+    <button class="btn btn-dark btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false">
+      Text Me My List!
+    </button>
+    <div class="dropdown-menu">
+      <form class="px-4 py-3">
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Phone Number</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
 </div>
+
 
 <script src="./js/profile.js"></script>

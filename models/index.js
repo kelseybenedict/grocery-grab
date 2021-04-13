@@ -1,25 +1,13 @@
-const User = require("./User");
-const List = require("./List");
-const Item = require("./Item");
-const { PassThrough } = require("stream");
+const User = require('./User');
+const Project = require('./Project');
 
-User.hasMany(List, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE'
-  });
-  
-  List.belongsTo(User, {
-    foreignKey: 'user_id'
-  });
+User.hasMany(Project, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
 
-  List.hasMany(Item, { 
-    foreignKey:"list_id",
-    onDelete: "CASCADE"
-  });
+Project.belongsTo(User, {
+  foreignKey: 'user_id'
+});
 
-  Item.belongsTo(List, {
-    foreignKey: 'list_id'
-    
-  });
-
-  module.exports = { User, List, Item };
+module.exports = { User, Project };

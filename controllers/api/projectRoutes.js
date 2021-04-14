@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Project } = require('../../models');
 const withAuth = require('../../utils/auth');
+const twilio = require('../../utils/twilio');
 
 router.post('/', withAuth, async (req, res) => {
   try {
@@ -12,6 +13,24 @@ router.post('/', withAuth, async (req, res) => {
     res.status(200).json(newProject);
   } catch (err) {
     res.status(400).json(err);
+  }
+});
+router.get('/:id', withAuth, async (req, res) => {
+  try {
+    const projectData = await Project.findByPk(req.params.id, {
+      include: [
+        {
+          model: Project,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    const project = projectData.get({ plain: true });
+// ????
+    res.status(200).json(project);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 

@@ -5,19 +5,25 @@ var twilio = require('twilio');
 const { AlphaSenderContext } = require('twilio/lib/rest/messaging/v1/service/alphaSender');
 
 const client = twilio(accountSid, authToken);
+//const id = ;
 // include and call from wherever 
+const message = await fetch(`/api/projects/${id}`, {
+    method: 'GET',
+    body: JSON.stringify({})
+})
 // async await
-function sendText(recipient, message = "Hello from Node") { 
+// query selector is the id lauren created for phone number -- this needs to get updated 
+const phone = document.querySelector('#project-name').value.trim();
+function sendText(recipient, message) { 
     // regex for phone number 
 client.messages.create({
     body: message,
-    //to: recipient,  // Text this number
+    to: recipient,  // Text this number
     from: '+16194856522', // From a valid Twilio number
-    to: '+15039902739'
 })
 .then((message) => console.log("message: ",message.sid))
 .catch(err => console.warn(err));
 }
  
-sendText();
+sendText(phone, message);
 //module.exports = sendText;

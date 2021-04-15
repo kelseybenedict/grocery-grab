@@ -26,7 +26,20 @@ const withAuth = require('../utils/auth');
 //     res.status(500).json(err);
 //   }
 // });
-
+router.get('/project', withAuth, async (req, res) =>{
+  console.log("30")
+  try {
+    const list = await Project.findAll({
+      where: {user_id: req.session.user_id}
+    })
+    const listData = list.get({ plain: true });
+    console.log(listData);
+    res.json(listData).status(200)
+  } catch (error) {
+    res.status(400).json(error);
+    
+  }
+})
 router.get('/project/:id', async (req, res) => {
   try {
     const projectData = await Project.findByPk(req.params.id, {

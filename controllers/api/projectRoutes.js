@@ -17,7 +17,8 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 // get list info to send through Twilio
-router.post('/text/:id', withAuth, async (req, res) => {
+router.post('/text', withAuth, async (req, res) => {
+  console.log("21")
   try {
     console.log(req.params.id, req.body)
     // verify .number & .list

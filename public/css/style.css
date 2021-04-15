@@ -62,6 +62,7 @@ h5 {
   margin-bottom: 95px;
 }
 
+
 .card {
   padding-bottom: 15px;
   background: rgba(255, 255, 255, 0.774);
@@ -79,14 +80,42 @@ h5 {
   margin-bottom: 30px;
 }
 
-
-
 .dropdown-toggle{
-  margin-bottom: 45px;
+  /* margin-bottom: 45px; */
+  font-family: 'Montserrat Alternates', sans-serif;   
 }
 
 i {
   float: right;
+}
+
+.center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.774);
+  margin-bottom: 10px;
+}
+
+.show>.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #2d3e50;
+  border-style: none;
+  color: #d9e9e8;
+}
+
+.phone {
+  font-family: 'Montserrat Alternates', sans-serif;  
+}
+
+@media screen and (max-width: 767px) {
+
+.nopad {
+  padding: 0;
+}
 }
 
 @media screen and (max-width: 575px) {

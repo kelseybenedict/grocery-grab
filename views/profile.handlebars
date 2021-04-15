@@ -5,7 +5,7 @@
 </div> --}}
 
 <div class="row mt-4">
-  <div class="col-md-6 list-container">
+  <div class="col-md-6 list-container nopad">
     <form class="card text-center form new-project-form">
       <h3>Add To Your Grocery List!</h3>
       <div class="form-group">
@@ -32,29 +32,30 @@
         <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
       </div>
       <div class="col-2">
-        <i class="btn btn-sm btn-danger fas fa-trash-alt" data-id="{{project.id}}"></i>
+        <i class="btn btn-sm btn-primary fas fa-trash-alt" data-id="{{project.id}}"></i>
 
       </div>
     </div>
     {{/each}}
   </div>
-  {{/if}}
-  <div class="btn-group">
-    <button class="btn btn-dark btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-      aria-expanded="false">
+  <div class="btn-group center dropdown row">
+    <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false" data-flip='false'>
       Text Me My List!
     </button>
     <div class="dropdown-menu">
-      <form class="px-4 py-3">
+      <form class="px-4 py-3 frm">
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Phone Number</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+          <label for="exampleFormControlTextarea1" class="phone">Phone Number</label>
+          <textarea class="phone form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary phone">Submit</button>
       </form>
     </div>
   </div>
 </div>
+{{/if}}
+
 
 
 <script src="./js/profile.js"></script>

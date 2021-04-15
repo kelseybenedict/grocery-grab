@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Project } = require('../../models');
 const withAuth = require('../../utils/auth');
+const {sendText} = require('../../utils/twilio');
 
 router.post('/', withAuth, async (req, res) => {
   try {
@@ -14,6 +15,36 @@ router.post('/', withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+// get list info to send through Twilio
+router.post('/text', withAuth, async (req, res) => {
+  console.log("21")
+  try {
+    console.log(req.params.id, req.body)
+    // verify .number & .list
+    sendText(req.body.number, req.body.project)
+  } catch (error) {
+    res.status(400).json(err);
+  }
+});
+// router.get('/:id', withAuth, async (req, res) => {
+//   try {
+//     const projectData = await Project.findByPk(req.params.id, {
+//       include: [
+//         {
+//           model: Project,
+//           attributes: ['name'],
+//         },
+//       ],
+//     });
+
+//     const project = projectData.get({ plain: true });
+// // ????
+//     res.status(200).json(project);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {

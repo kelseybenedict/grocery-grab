@@ -4,6 +4,10 @@ var authToken = process.env.TWILIO_AUTH_TOKEN;   // Your Auth Token from www.twi
 var twilio = require('twilio');
 const { AlphaSenderContext } = require('twilio/lib/rest/messaging/v1/service/alphaSender');
 
+
+const message =
+
+
 const client = twilio(accountSid, authToken);
 // include and call from wherever 
 // async await

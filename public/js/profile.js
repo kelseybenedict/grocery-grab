@@ -20,6 +20,8 @@ const newFormHandler = async (event) => {
   }
 };
 
+
+
 // const editItemHandler = async (event) => {
 //   if (event.target.hasAttribute('data-id')) {
 //     const id = event.target.getAttribute('data-id');

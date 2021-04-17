@@ -32,7 +32,7 @@ router.get('/project', withAuth, async (req, res) =>{
     const list = await Project.findAll({
       where: {user_id: req.session.user_id}
     })
-    const listData = list.get({ plain: true });
+    const listData = list.map((el) => el.get({ plain: true }));
     console.log(listData);
     res.json(listData).status(200)
   } catch (error) {

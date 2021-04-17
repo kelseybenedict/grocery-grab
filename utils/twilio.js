@@ -17,6 +17,7 @@ client.messages.create({
     to: recipient,  // Text this number
     from: '+16194856522', // From a valid Twilio number
 })
+console.log("message1:", message)
 .then((message) => console.log("message: ",message.sid))
 .catch(err => console.warn(err));
 }
